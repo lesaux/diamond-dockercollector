@@ -6,13 +6,9 @@ MAINTAINER Pierig Le Saux <lesaux@pythian.com>
 
 # Install dependencies
 ENV DEBIAN_FRONTEND noninteractive
-ENV HANDLERS diamond.handler.graphite.GraphiteHandler
-ENV GRAPHITE_HOST 127.0.0.1
-ENV GRAPHITE_PORT 2003
 ENV STATSD_HOST 127.0.0.1
 ENV STATSD_PORT 8125
 ENV DOCKER_HOSTNAME docker-hostname
-ENV INTERVAL 5
 
 RUN apt-get update && \
     apt-get install -y python-setuptools make pbuilder python-mock python-configobj python-support cdbs git python-psutil python-pip && \
