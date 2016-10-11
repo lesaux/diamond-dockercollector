@@ -11,9 +11,6 @@ RUN apk add --no-cache build-base linux-headers python-dev py-pip \
 
 COPY diamond /etc/diamond/
 
-COPY config_diamond.sh /
-#RUN chmod +x /config_diamond.sh
-
 ADD entrypoint.sh /
 #RUN chmod +x /entrypoint.sh
 
